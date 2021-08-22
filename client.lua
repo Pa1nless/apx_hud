@@ -6,9 +6,9 @@ local PlayerId = PlayerId
 
 -- Update Time
 local sTime <const> = 500
+local hunger, thirst = 100, 100
 
 AddEventHandler("esx_status:onTick", function(status)
-    local hunger, thirst
     for k, v in pairs(status) do
         if v.name == 'hunger' then hunger = v.percent
         elseif v.name == 'thirst' then thirst = v.percent
